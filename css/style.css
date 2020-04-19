@@ -1,0 +1,245 @@
+	/* ****************************************************
+	*************  HEADER  *****************************
+	**************************************************** */
+
+	.flexible {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	a:link, a:visited {
+		color: #212429;
+		text-decoration: none;
+	}
+
+	/*logo*/
+	#logo img {
+		width: 200px;
+	}
+	.subtitle {
+		align-self: center;
+		display: inline-block;
+		flex-grow: 1;
+		font-family: 'Lato', sans-serif;
+		font-size: 140%;
+		font-variant: small-caps;
+		letter-spacing: 0.2em;
+		position: relative;
+	}
+
+	/*barra de navegacion*/
+	nav {
+		align-self: flex-end;
+	}
+	nav ul li {
+		display: inline-block;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.4em;
+		font-weight: 400;
+		list-style-type: none;
+		padding: 10px 20px;
+	}
+
+
+	nav ul li:hover {
+		background-color: rgba(33, 36, 41, .4);
+	}
+	.select {
+		background-color: rgba(13, 16, 21, 0.1);
+	}
+
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	nav a, nav a:visited {
+		color: #212429;
+	}
+
+	/* ****************************************************
+	*************  GALLERY  *****************************
+	**************************************************** */
+
+	/* INDEX.HTML */
+	section#wrapper {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	article.images {
+		display: inline-block;
+		position: relative;
+		width: 49%;
+	}
+
+	.images img {
+		display: block;
+		width: 100%;
+	}
+
+	div.text {
+		background-color: #212429;
+		border-top-right-radius: 24px;
+		bottom: 0px;
+		color: lightgrey;
+		font-family: 'Lato', sans-serif;
+		font-size: 1.4em;
+		font-weight: 100;
+		height: 30%;
+		opacity: 0.8;
+		padding-top: 2%;
+		position: absolute;
+		text-indent: 2%;
+		width: 80%;
+	}
+
+	/*Titulo imagenes*/
+
+	.pictitle {
+		background-color: #212429;
+		border-radius: 24px 24px;
+		color: #fff;
+		font-family: 'Lato', sans-serif;
+		font-weight: 100;
+		margin: 10px 0 0 30px;
+		padding: 10px 20px;
+		position: absolute;
+	}
+
+
+	/* ABOUT.HTML */
+	#container article {
+		margin: 2% 4%;
+		max-width: 90%;
+		padding-bottom: 0;
+	}
+
+	#imgabout {
+		float: left;	
+		margin: 0 10px;
+	}
+
+	.about {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.2em;
+		padding: 0 10px;
+	}
+
+	/* CONTACT.HTML */
+	#contact {
+		margin: 0 4%;
+	}
+
+	.contact, .contact a {
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		color: #555041;
+		display: block;
+		font-family: 'Open Sans', sans-serif;
+		list-style-type: none;
+		margin: 0;
+		min-height: 20px;
+		padding: 0 0 0 30px;
+	}
+	.contact li {
+		margin: 0 0 10px;
+	}
+	.contact li.phone {
+		background-image: url('../img/telephone.svg');
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+	}
+	.contact li.mail {
+		background-image: url('../img/mail.svg');
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+	}
+	.contact li.twitter {
+		background-image: url('../img/Twitter.svg');
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+	}
+	iframe {
+		margin: 4% 0;
+	}
+
+	/* ****************************************************
+	*************  FOOTER  *****************************
+	**************************************************** */
+
+	footer {
+		background-color: #212429;
+		color: grey;
+		font-size: 0.8em;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+
+	img.social {
+		filter: sepia(60%);
+		margin: 30px 5px;
+		width: 40px;
+	}
+
+	img.social:hover {
+		filter: sepia(0%);
+	}
+
+	footer p {
+		font-family: 'Lato',sans-serif;
+		font-weight: 300;
+		letter-spacing: .2em;
+	}
+
+	footer p a:link, footer p a:visited {
+		color: grey;
+	}
+
+
+
+	/* ****************************************************
+	*************  MEDIA  *****************************
+	**************************************************** */
+
+	@media (max-width: 640px), (orientation: portrait) {	
+		section#wrapper {
+			width: 100%;
+		}
+
+		article.images {
+			display: block;
+			transition: all .4s linear;
+			width: 100%;
+		}
+
+		.images img {
+			display: block;
+			width: 100%;
+		}
+	}
+
+	@media all and (max-width: 540px), (orientation: portrait) {
+		#logo img {
+			transition: width 0.8s ease-out;
+			width: 300px;
+		}
+		.flexible {
+			flex-direction: column;
+		}
+		#logo {
+			align-self: center;
+		}
+		.subtitle {
+			align-self: center;
+			font-size: 1.4em;
+		}
+		nav {
+			align-self: center;
+		}
+		#imgabout {
+			float: none;
+		}
+	}
